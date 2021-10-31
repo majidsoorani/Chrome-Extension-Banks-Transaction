@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "Chrome Extension Banks Transaction",
+	"version": "0.1",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://messages.google.com/*",
+				"https://www.rb24.ir/*",
+				"https://ebanking.bankmellat.ir/ebanking/*",
+				"https://my.bmi.ir/portalserver/home",
+				"https://ib.qmb.ir/*",
+				"https://www.bpmellat.ir/*"
+			],
+			"js": [ "jquery-3.6.0.min.js", "content.js","jquery.tabletojson.min.js" ]
+		}
+	],
+	"browser_action": {
+		"default_icon": "curling-wand-pngrepo-com.png"
+	},
+	"background": {
+		"scripts": [ "background.js" ]
+	},
+	"permissions": [
+		"alarms",
+		"storage"
+	]
+}
