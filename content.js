@@ -420,7 +420,7 @@ chrome.runtime.onMessage.addListener(
                             Object.values(columns).forEach(column => { if(column == "") return
                                 if (column.match(/زمان تراکنش :/)) {
                                     dateStr = column.split(" زمان تراکنش :")[1].split(",")[0].split(" ");
-                                    date = dateStr[29] + dateStr[28].replace("مهر", "07").replace("آبان", "08") + dateStr[27];
+                                    date = dateStr[29] + dateStr[28].replace("مهر", "07").replace("آبان", "08").replace("آذر", "09").replace("دی", "10").replace("بهمن", "11") + (parseInt(dateStr[27]) < 10 ? '0'+dateStr[27]:dateStr[27] ) ;
                                     if (date > datemax)
                                         datemax = date;
                                     prtime = column.split(" زمان تراکنش :")[1].replaceAll(" ", "").replaceAll("\n", "").split(",")[1];
