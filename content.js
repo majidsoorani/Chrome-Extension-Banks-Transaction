@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(
     function xxxx(request, sender, sendResponse) {
         {
             if (typeof dic === 'undefined') dic = [];
-            if (typeof datemax === 'undefined') datemax = '1400/02/11';
+            if (typeof datemax === 'undefined') datemax = '1401/02/11';
             if (request.message == 'clicked_browser_action') {
                 setTimeout(function () {
                     xxxx({
@@ -207,7 +207,7 @@ chrome.runtime.onMessage.addListener(
                             transAmount = transAmount.substring(transAmount.length - 1) + transAmount.substring(0, transAmount.length - 1)
                             regexTransAccount = /(حساب)(\D*)(\d+)/;
                             accountNo = re.split("\n")[2].split(":")[1];
-                            date = "1400" + re.split("\n")[4].split("-")[0];
+                            date = "1401" + re.split("\n")[4].split("-")[0];
                             if (date >= datemax)
                                 datemax = date;
                             else
