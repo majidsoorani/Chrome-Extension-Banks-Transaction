@@ -4,7 +4,7 @@ chrome.runtime.onMessage.addListener(
     function xxxx(request, sender, sendResponse) {
         {
             if (typeof dic === 'undefined') dic = [];
-            if (typeof datemax === 'undefined') datemax = '1401/02/11';
+            if (typeof datemax === 'undefined') datemax = '1401/01/01';
             if (request.message == 'clicked_browser_action') {
                 setTimeout(function () {
                     xxxx({
@@ -264,6 +264,7 @@ chrome.runtime.onMessage.addListener(
                             dic[date + "--" + mostanadNumber + "--Doctor"] = "varizMellat=1&date=" + date + "&time=" + prtime + "&transAmount=" + transAmount + "&accountNo=" + accountNo + "&mostanad=" + mostanadNumber + "&lastTransDesc=" + transType + "&transDesc=" + desc + "&varizColumnsDesc=" + transType + "&balance=" + balance;;
                         }
                         break;
+                    case 'https://ib.sb24.ir/webbank/viewAcc/defaultBillList.action':
                     case 'https://ib.qmb.ir/webbank/viewAcc/defaultBillList.action':
                     case 'https://ib.qmb.ir/webbank/viewAcc/depositShow.action':
                         var lastTime = '00:00'
